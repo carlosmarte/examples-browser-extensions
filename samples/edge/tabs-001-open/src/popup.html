@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tab Checker Extension</title>
+    <style>
+      body {
+        width: 300px;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+      }
+      button {
+        background-color: #0078d4;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+      button:hover {
+        background-color: #006cbe;
+      }
+      #tabList {
+        max-height: 300px;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+        padding: 5px;
+      }
+      .tab-item {
+        padding: 5px;
+        border-bottom: 1px solid #eee;
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .tab-item:last-child {
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Tab Checker</h2>
+    <button id="checkTabsButton">Show All Open Tabs</button>
+    <div id="tabList"></div>
+    <script type="module" src="./popup.js"></script>
+  </body>
+</html>
