@@ -1,9 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "Hello World Alert",
+  "name": "Hello World Extension",
   "version": "1.0",
-  "description": "Shows a Hello World alert when button is clicked",
+  "description": "A simple extension that shows a Hello World alert",
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "48": "icon.png"
   }
 }
