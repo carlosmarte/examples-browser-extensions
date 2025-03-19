@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Checker Extension",
+  "version": "1.0",
+  "description": "An extension that can check all open tabs",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": ["tabs", "storage", "alarms"],
+  "icons": {
+    "48": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
