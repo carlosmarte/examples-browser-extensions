@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "tabs-003-switch",
+  "version": "1.0",
+  "description": "An extension that can check all open tabs",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "host_permissions": ["<all_urls>"],
+  "permissions": ["tabs", "activeTab", "scripting"],
+  "icons": {
+    "48": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

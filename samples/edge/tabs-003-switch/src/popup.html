@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tab Scroller</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        width: 250px;
+        padding: 15px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      h2 {
+        margin-top: 0;
+        color: #333;
+      }
+
+      .control-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .speed-control {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .speed-label {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      button {
+        background-color: #0078d7;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      button:hover {
+        background-color: #106ebe;
+      }
+
+      button.active {
+        background-color: #107c10;
+      }
+
+      button.inactive {
+        background-color: #e81123;
+      }
+
+      .status {
+        margin-top: 10px;
+        padding: 8px;
+        border-radius: 4px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .status.active {
+        background-color: #d9f6dd;
+        color: #107c10;
+      }
+
+      .status.inactive {
+        background-color: #fde7e9;
+        color: #e81123;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Tab Scroller</h2>
+
+      <div class="speed-control">
+        <div class="speed-label">
+          <span>Scroll Speed:</span>
+          <span id="speed-value">1</span>
+        </div>
+        <input type="range" id="scroll-speed" min="1" max="10" value="1" />
+      </div>
+
+      <div class="control-row">
+        <button id="rotation-on" class="active">Rotation ON</button>
+        <button id="rotation-off" class="inactive">Rotation OFF</button>
+      </div>
+
+      <div id="status" class="status inactive">Rotation is currently OFF</div>
+    </div>
+
+    <script type="module" src="./popup.js"></script>
+  </body>
+</html>
